@@ -8,216 +8,126 @@
       font-family: Arial, sans-serif;
       background: #fff0f5;
       padding: 20px;
-      line-height: 1.6;
-    }
-    h1 {
       text-align: center;
     }
-    .question {
-      margin-bottom: 18px;
-      background: #ffffff;
-      padding: 12px;
+    .box {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 500px;
+      margin: auto;
+    }
+    h2 {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      padding: 10px;
+      margin: 8px 0;
+      background: #ffe4ec;
       border-radius: 8px;
+      cursor: pointer;
+    }
+    input {
+      margin-right: 8px;
     }
     button {
+      margin-top: 20px;
       padding: 14px 24px;
       font-size: 16px;
       background: #ff4d6d;
       color: white;
       border: none;
       border-radius: 8px;
-      display: block;
-      margin: 30px auto;
     }
     #proposal {
       display: none;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 30px;
     }
   </style>
 </head>
 
 <body>
 
-<h1>Before the Question 🌹</h1>
-<p style="text-align:center">
-There are no right or wrong answers<br>
-Just choose what feels true
-</p>
-
-<form id="game">
-
-<div class="question">1. We started as<br>
-<input type="radio" name="q1"> Strangers<br>
-<input type="radio" name="q1"> Friends<br>
-<input type="radio" name="q1"> Best friends<br>
-<input type="radio" name="q1"> Something that slowly became special
+<div class="box" id="game">
+  <h2 id="question"></h2>
+  <div id="options"></div>
+  <button onclick="nextQuestion()">Next 🌹</button>
 </div>
 
-<div class="question">2. From friends to this felt<br>
-<input type="radio" name="q2"> Sudden<br>
-<input type="radio" name="q2"> Forced<br>
-<input type="radio" name="q2"> Natural<br>
-<input type="radio" name="q2"> Meant to happen
-</div>
+<div class="box" id="proposal">
+  <h2>🌹 Just One Last Thing 🌹</h2>
+  <p>
+    You stayed till the end<br><br>
 
-<div class="question">3. When I call you Papa you feel<br>
-<input type="radio" name="q3"> Normal<br>
-<input type="radio" name="q3"> Smile<br>
-<input type="radio" name="q3"> Shy<br>
-<input type="radio" name="q3"> Soft inside
-</div>
+    I didn’t make this for answers<br>
+    I made this because you matter to me<br><br>
 
-<div class="question">4. What am I to you now<br>
-<input type="radio" name="q4"> Same friend<br>
-<input type="radio" name="q4"> Someone close<br>
-<input type="radio" name="q4"> Someone special<br>
-<input type="radio" name="q4"> Someone who matters a lot
-</div>
+    I like you<br>
+    a little more than I planned<br>
+    and a lot more than I admit<br><br>
 
-<div class="question">5. When I care too much you feel<br>
-<input type="radio" name="q5"> Annoyed<br>
-<input type="radio" name="q5"> Confused<br>
-<input type="radio" name="q5"> Protected<br>
-<input type="radio" name="q5"> Loved
-</div>
+    So before you go<br><br>
 
-<div class="question">6. When we talk for long hours you feel<br>
-<input type="radio" name="q6"> Tired<br>
-<input type="radio" name="q6"> Calm<br>
-<input type="radio" name="q6"> Happy<br>
-<input type="radio" name="q6"> Don’t want to stop
-</div>
-
-<div class="question">7. Even after fights we always<br>
-<input type="radio" name="q7"> Stay silent<br>
-<input type="radio" name="q7"> Miss each other<br>
-<input type="radio" name="q7"> Think a lot<br>
-<input type="radio" name="q7"> Come back
-</div>
-
-<div class="question">8. When I say I choose you you feel<br>
-<input type="radio" name="q8"> Pressure<br>
-<input type="radio" name="q8"> Responsibility<br>
-<input type="radio" name="q8"> Wanted<br>
-<input type="radio" name="q8"> Safe
-</div>
-
-<div class="question">9. Me setting boundaries feels like<br>
-<input type="radio" name="q9"> Control<br>
-<input type="radio" name="q9"> Concern<br>
-<input type="radio" name="q9"> Care<br>
-<input type="radio" name="q9"> Fear of losing you
-</div>
-
-<div class="question">10. When I get hurt it’s because<br>
-<input type="radio" name="q10"> I overthink<br>
-<input type="radio" name="q10"> I care deeply<br>
-<input type="radio" name="q10"> I’m sensitive<br>
-<input type="radio" name="q10"> You matter to me
-</div>
-
-<div class="question">11. When I stay it is because<br>
-<input type="radio" name="q11"> Habit<br>
-<input type="radio" name="q11"> Fear<br>
-<input type="radio" name="q11"> Love<br>
-<input type="radio" name="q11"> Choice
-</div>
-
-<div class="question">12. When I step back you feel<br>
-<input type="radio" name="q12"> Relief<br>
-<input type="radio" name="q12"> Silence<br>
-<input type="radio" name="q12"> Missing<br>
-<input type="radio" name="q12"> Something feels off
-</div>
-
-<div class="question">13. What makes our bond strong<br>
-<input type="radio" name="q13"> Love<br>
-<input type="radio" name="q13"> Friendship<br>
-<input type="radio" name="q13"> Understanding<br>
-<input type="radio" name="q13"> Choosing each other
-</div>
-
-<div class="question">14. When you think about us you feel<br>
-<input type="radio" name="q14"> Confused<br>
-<input type="radio" name="q14"> Calm<br>
-<input type="radio" name="q14"> Emotional<br>
-<input type="radio" name="q14"> Hopeful
-</div>
-
-<div class="question">15. Me in your life feels like<br>
-<input type="radio" name="q15"> Extra<br>
-<input type="radio" name="q15"> Normal<br>
-<input type="radio" name="q15"> Important<br>
-<input type="radio" name="q15"> Hard to replace
-</div>
-
-<div class="question">16. When I protect you you feel<br>
-<input type="radio" name="q16"> Annoyed<br>
-<input type="radio" name="q16"> Controlled<br>
-<input type="radio" name="q16"> Safe<br>
-<input type="radio" name="q16"> Cared for
-</div>
-
-<div class="question">17. Our story so far is<br>
-<input type="radio" name="q17"> Messy<br>
-<input type="radio" name="q17"> Emotional<br>
-<input type="radio" name="q17"> Real<br>
-<input type="radio" name="q17"> Beautiful in its own way
-</div>
-
-<div class="question">18. If I wasn’t here you would<br>
-<input type="radio" name="q18"> Be okay<br>
-<input type="radio" name="q18"> Feel strange<br>
-<input type="radio" name="q18"> Miss me<br>
-<input type="radio" name="q18"> Pretend you don’t
-</div>
-
-<div class="question">19. What do I want most<br>
-<input type="radio" name="q19"> To stay<br>
-<input type="radio" name="q19"> To be chosen<br>
-<input type="radio" name="q19"> To be understood<br>
-<input type="radio" name="q19"> All of the above
-</div>
-
-<div class="question">20. The one thing I never wanted to be in your life<br>
-<input type="radio" name="q20"> A burden<br>
-<input type="radio" name="q20"> A question<br>
-<input type="radio" name="q20"> A choice you’re unsure of<br>
-<input type="radio" name="q20"> Someone replaceable
-</div>
-
-<button type="button" onclick="finishGame()">Finish</button>
-</form>
-
-<div id="proposal">
-<h2>🌹 Just One Last Thing 🌹</h2>
-<p>
-If you’re reading this<br>
-it means you stayed till the end<br>
-and that made me smile<br><br>
-
-I didn’t make this to get answers<br>
-I made it because you matter to me<br><br>
-
-I like you<br>
-a little more than I planned<br>
-and a lot more than I admit<br><br>
-
-So before you go<br><br>
-
-<b>Will you be mine 🌹🤍</b>
-</p>
+    <b>Will you be mine 🌹🤍</b>
+  </p>
 </div>
 
 <script>
-function finishGame() {
-  document.getElementById("game").style.display = "none";
-  document.getElementById("proposal").style.display = "block";
-  window.scrollTo(0, document.body.scrollHeight);
+const questions = [
+  ["We started as", ["Strangers","Friends","Best friends","Something that slowly became special"]],
+  ["From friends to this felt", ["Sudden","Forced","Natural","Meant to happen"]],
+  ["When I call you Papa you feel", ["Normal","Smile","Shy","Soft inside"]],
+  ["What am I to you now", ["Same friend","Someone close","Someone special","Someone who matters a lot"]],
+  ["When I care too much you feel", ["Annoyed","Confused","Protected","Loved"]],
+  ["When we talk for long hours you feel", ["Tired","Calm","Happy","Don’t want to stop"]],
+  ["Even after fights we always", ["Stay silent","Miss each other","Think a lot","Come back"]],
+  ["When I say I choose you you feel", ["Pressure","Responsibility","Wanted","Safe"]],
+  ["Me setting boundaries feels like", ["Control","Concern","Care","Fear of losing you"]],
+  ["When I get hurt it’s because", ["I overthink","I care deeply","I’m sensitive","You matter to me"]],
+  ["When I stay it is because", ["Habit","Fear","Love","Choice"]],
+  ["When I step back you feel", ["Relief","Silence","Missing","Something feels off"]],
+  ["What makes our bond strong", ["Love","Friendship","Understanding","Choosing each other"]],
+  ["When you think about us you feel", ["Confused","Calm","Emotional","Hopeful"]],
+  ["Me in your life feels like", ["Extra","Normal","Important","Hard to replace"]],
+  ["When I protect you you feel", ["Annoyed","Controlled","Safe","Cared for"]],
+  ["Our story so far is", ["Messy","Emotional","Real","Beautiful in its own way"]],
+  ["If I wasn’t here you would", ["Be okay","Feel strange","Miss me","Pretend you don’t"]],
+  ["What do I want most", ["To stay","To be chosen","To be understood","All of the above"]],
+  ["The one thing I never wanted to be in your life", ["A burden","A question","A choice you’re unsure of","Someone replaceable"]]
+];
+
+let current = 0;
+
+function loadQuestion() {
+  document.getElementById("question").innerText =
+    (current + 1) + ". " + questions[current][0];
+
+  const opts = document.getElementById("options");
+  opts.innerHTML = "";
+
+  questions[current][1].forEach(opt => {
+    opts.innerHTML += `
+      <label>
+        <input type="radio" name="answer"> ${opt}
+      </label>
+    `;
+  });
 }
+
+function nextQuestion() {
+  const checked = document.querySelector('input[name="answer"]:checked');
+  if (!checked) return;
+
+  current++;
+  if (current < questions.length) {
+    loadQuestion();
+  } else {
+    document.getElementById("game").style.display = "none";
+    document.getElementById("proposal").style.display = "block";
+  }
+}
+
+loadQuestion();
 </script>
 
 </body>
